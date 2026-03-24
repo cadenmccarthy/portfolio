@@ -34,8 +34,8 @@ export const footerData = {
   links: [],
   secondaryLinks: [],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/caden-mccarthy' },
-    { ariaLabel: 'Linktree', icon: 'tabler:brand-linktree', href: 'https://linktree.com/cadenmccarthy' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/caden-mccarthy', target: '_blank' },
+    { ariaLabel: 'Linktree', icon: 'tabler:brand-linktree', href: 'https://linktree.com/cadenmccarthy', target: '_blank' },
   ],
   footNote: `
     <div class="flex flex-col">
