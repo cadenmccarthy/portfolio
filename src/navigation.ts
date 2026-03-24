@@ -10,12 +10,20 @@ export const headerData = {
       text: 'Projects',
       links: [
         {
-          text: 'Project One',
-          href: getPermalink('/projects/project-one'),
+          text: 'UCI Rocket Project',
+          href: getPermalink('/projects/ucirp'),
         },
         {
-          text: 'Project Two',
-          href: getPermalink('/projects/project-two'),
+          text: 'Orbital Mechanics',
+          href: getPermalink('/projects/orbital_mechanics'),
+        },
+        {
+          text: 'FWMAV',
+          href: getPermalink('/projects/fwmav'),
+        },
+        {
+          text: 'Other Projects',
+          href: getPermalink('/projects/other'),
         },
       ],
     },
