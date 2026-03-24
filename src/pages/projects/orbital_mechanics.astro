@@ -1,9 +1,4 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -12,7 +7,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-<section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+  <section class="relative h-[70vh] flex items-center justify-center overflow-hidden -mt-[80px] pt-[80px]">
     <img 
       src="/portfolio/space_background.jpg" 
       alt="Space Background" 
@@ -34,9 +29,7 @@ const metadata = {
     </div>
     
     <div class="flex-shrink-0">
-      <a href="https://rocket.eng.uci.edu" target="_blank" class="block hover:scale-105 transition duration-300" aria-label="UCI Rocket Project Website">
-        <img src="/portfolio/ucirp-logo.png" alt="UCI Rocket Project Logo" class="w-40 h-40 object-contain rounded-xl shadow-md border border-gray-100 dark:border-gray-800 bg-white" />
-      </a>
+      <img src="/portfolio/earth_1.png" alt="Earth" class="w-40 h-40 object-contain rounded-xl shadow-md border border-gray-100 dark:border-gray-800 bg-white p-2" />
     </div>
   </section>
 
@@ -44,15 +37,33 @@ const metadata = {
 
   <section class="max-w-4xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-bold mb-6 font-heading">Three-Body Problem</h2>
-    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
       My first orbital mechanics project was modeling the three-body problem for a spacecraft in the Earth-Moon system. I started off by finding resources online to learn about the math and physics behind the three-body problem, and then created a script in MATLAB to generate the trajectory of a spacecraft with a set of adjustable initial conditions. The first script I created was for the planar circular restricted three-body problem.
     </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <img src="/portfolio/three_body_1.gif" alt="Three Body Simulation 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      <img src="/portfolio/three_body_2.gif" alt="Three Body Simulation 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      After creating the script for the planar three-body problem, I created one in three dimensions. I also created a plot of velocity versus time for the rotating frame.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <img src="/portfolio/three_body_3.gif" alt="Three Body Simulation 3" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      <img src="/portfolio/three_body_4.gif" alt="Three Body Simulation 4" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+    </div>
+
+    <img src="/portfolio/three_body_5.gif" alt="Three Body Simulation 5" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
   </section>
 
-  <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
+  <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 mb-20 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Interplanetary Trajectory</h2>
-    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
       After creating the three-body problem script, I wrote a MATLAB script to calculate and plot the trajectory of a spacecraft in the solar system. The script I designed used the patched conic method to calculate the spacecraft's trajectory with gravity assists. The script treats the trajectory as a two-body problem until the spacecraft encounters a planet, where the code will then treat the gravity assist as an impulsive maneuver and restart the integration with updated initial conditions. The trajectory I designed used a Mars-Earth-Jupiter gravity assist route, and encounters Europa upon an impulsive maneuver performed at Jupiter periapsis to capture into an orbit around Jupiter.
     </p>
+
+    <img src="/portfolio/trajectory.gif" alt="Interplanetary Trajectory Simulation" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
   </section>
 </Layout>
