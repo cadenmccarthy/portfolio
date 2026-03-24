@@ -1,228 +1,125 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'FWMAV',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <section class="relative h-[70vh] flex items-center justify-center overflow-hidden -mt-[80px] pt-[80px]">
+    <video 
+      src="/portfolio/fwmav_background.mov" 
+      autoplay loop muted playsinline 
+      class="absolute inset-0 w-full h-full object-cover -z-10"
+    ></video>
+    <div class="absolute inset-0 bg-black/60 -z-10"></div>
+    
+    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide text-center font-heading drop-shadow-lg px-4">
+      Flapping-Wing Micro Air Vehicle
+    </h1>
+  </section>
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
-    </Fragment>
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading border-b-2 border-gray-200 dark:border-gray-800 pb-4">
+      FWMAV Beta Subteam
+    </h2>
+    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
+      The objective of FWMAV's Beta subteam was to create a drone that uses a bio-inspired flapping wing design for propulsion. Using SolidWorks, 3D printing, laser cutting, and lots of testing, I helped to make Beta fly.
+    </p>
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <img src="/portfolio/fwmav_team_photo.HEIC" alt="Beta Team" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      <img src="/portfolio/beta_flight.gif" alt="Beta Flight GIF" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+    </div>
+  </section>
 
-  <!-- Stats Widget ****************** -->
+  <section class="max-w-5xl mx-auto px-6 py-16 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
+    <h2 class="text-3xl font-bold mb-6 font-heading">Design</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-12">
+      My specific role on FWMAV was to design, manufacture, and test components to improve Beta's design. This included major revisions to the flapping mechanism and flapping components to decrease mass and increase reliability. My main focus was on the design of the chassis, which acts as the motor mount and gear hub for the flapping mechanism. This component was one of the heaviest on the drone, and its main structure as well as mounting system to the drone frame left a large room for improvement in terms of reducing mass. I designed, 3D printed, and tested many iterations of the chassis before settling on the final design that was both light enough and strong enough for Beta to fly. The efforts of my team and I reduced the mass of the drone by 19%, while increasing thrust by four times, enabling flight.
+    </p>
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/mechanism_1.png" alt="Mechanism View 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Initial chassis mechanism mount</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/mechanism_2.png" alt="Mechanism View 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Initial chassis design</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/mechanism_3.png" alt="Mechanism View 3" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Finalized chassis design with updated mounting</figcaption>
+      </figure>
+    </div>
 
-  <!-- Features3 Widget ************** -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/beta_assembly_1.jpg" alt="Beta 1.0 Assembly" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Initial Beta drone assembly (~310 grams)</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/beta_assembly_2.jpg" alt="Beta 2.0 Assembly" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Final Beta drone assembly (~252 grams)</figcaption>
+      </figure>
+    </div>
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/rocker_1.png" alt="Rocker 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Initial rocker design</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/rocker_2.png" alt="Rocker 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Final rocker design strengthened to avoid failure at high flapping frequencies</figcaption>
+      </figure>
+    </div>
 
-  <!-- Features3 Widget ************** -->
+    <figure class="flex flex-col items-center max-w-3xl mx-auto mb-12">
+      <img src="/portfolio/mechanism_top.png" alt="Mechanism Top View" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Beta flapping mechanism diagram</figcaption>
+    </figure>
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
+    <figure class="flex flex-col items-center max-w-3xl mx-auto">
+      <video 
+        src="/portfolio/mechanism_assembly_demo.mp4" 
+        class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3"
+        autoplay loop muted playsinline controls
+      ></video>
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+        Beta flapping mechanism
+      </figcaption>
+    </figure>
+  </section>
 
-  <!-- Steps2 Widget ****************** -->
+  <section class="max-w-5xl mx-auto px-6 py-16 mb-20">
+    <h2 class="text-3xl font-bold mb-6 font-heading">Failures</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-12">
+      There were many failures on the path to Beta's ultimate success. One of the major issues faced by the team was mechanism reliability, as the flapping frequency of 30 hertz would shred gears and break printed plastic components. I redesigned the chassis to maximize strength while minimizing weight. Another major problem was slippage of the main gear shaft that would cause the mechanism to fall out of alignment, dropping the thrust to near zero. I came up with the solution to use a D-shaft, which eliminated all slippage, increasing reliability and thrust.
+    </p>
 
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/shredded_gear.png" alt="Shredded gear" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">A shredded pinion gear</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <video 
+          src="/portfolio/flight_failure.mov" 
+          class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3"
+          autoplay loop muted playsinline controls
+        ></video>
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+          One of the many failures faced during testing
+        </figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/beta_thrust_test.gif" alt="Beta Thrust Test" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Mechanism thrust test</figcaption>
+      </figure>
+    </div>
+  </section>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
 </Layout>
