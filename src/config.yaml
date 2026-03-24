@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Caden McCarthy
+    template: '%s — Caden McCarthy'
+  description: "🚀 Portfolio of Caden McCarthy, Aerospace Engineering Student at UC Irvine."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Caden McCarthy
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
