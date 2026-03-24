@@ -1,228 +1,90 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Other Projects',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <section class="relative h-[70vh] flex items-center justify-center overflow-hidden -mt-[80px] pt-[80px]">
+    <img 
+      src="/portfolio/other_1.jpg" 
+      alt="Other Projects Background" 
+      class="absolute inset-0 w-full h-full object-cover -z-10"
+    />
+    <div class="absolute inset-0 bg-black/60 -z-10"></div>
+    
+    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide text-center font-heading drop-shadow-lg">
+      Other Projects
+    </h1>
+  </section>
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
-    </Fragment>
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-10 font-heading border-b-2 border-gray-200 dark:border-gray-800 pb-4">
+      Autonomous Rover
+    </h2>
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-4 font-heading">Role</h3>
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        The autonomous rover project was a challenge to design a rover from scratch that could autonomously follow a given track and grab a can of a specific color at the end of the track. I was the lead for a team of five who all contributed to the project and ultimately led to our team placing second out of 40 teams. As team lead, I delegated tasks, made critical decisions on the architecture of the rover, and helped with the overall rover design.
+      </p>
+    </div>
 
-  <!-- Stats Widget ****************** -->
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold mb-4 font-heading">Rover Design</h3>
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+        In order to follow the track, the rover has three infrared (IR) sensors to detect when it is over or off of the black line on the track. This data is fed into an Arduino that decides what action the rover is to take, and then the motors that control the two rear wheels are rotated independently to set the rover on a correct course. The end of the track is signaled by a thick black line, after which the rover activates a PixyCam to detect a can of a specific color and grabs the can after it is within range. I helped to design the main chassis of the rover in SolidWorks, which was then laser cut and assembled.
+      </p>
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <figure class="flex flex-col items-center">
+          <img src="/portfolio/other_2.png" alt="Rover Design 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+          <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+            Full rover assembly in SolidWorks
+          </figcaption>
+        </figure>
+        
+        <figure class="flex flex-col items-center">
+          <img src="/portfolio/other_3.png" alt="Rover Design 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+          <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+            IR sensor placement on the bottom of the rover
+          </figcaption>
+        </figure>
+      </div>
 
-  <!-- Features3 Widget ************** -->
+      <figure class="flex flex-col items-center max-w-4xl mx-auto">
+        <img src="/portfolio/other_4.gif" alt="Rover Design Animation" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+          Claw mechanism actuation
+        </figcaption>
+      </figure>
+    </div>
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+<div class="mb-10">
+      <h3 class="text-2xl font-bold mb-4 font-heading">Competition</h3>
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+        The final competition track has a black line which the rover must follow, and several cans of different colors placed at the end of the track, one of which must be selected and captured by the rover's claw mechanism. The rover that completes the track in the shortest amount of time wins the competition. Our team placed second in the final competition amongst 40 teams, after many design and code iterations.
+      </p>
 
-  <!-- Features3 Widget ************** -->
+      <figure class="flex flex-col items-center max-w-4xl mx-auto mb-10">
+        <video 
+          src="/portfolio/other_5.mov" 
+          class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3"
+          autoplay loop muted playsinline controls
+        ></video>
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+          Practice competition track
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
+  <section class="max-w-5xl mx-auto px-6 py-16 bg-gray-50 dark:bg-slate-900 rounded-2xl my-10 border border-gray-100 dark:border-gray-800 mb-20">
+    <h2 class="text-4xl md:text-5xl font-bold font-heading mb-6">
+      SolidWorks Falcon 9
+    </h2>
+    </section>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
 </Layout>
