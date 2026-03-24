@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import bgImage from '~/assets/images/MOCH4_wide.jpg';
 
 const metadata = {
   title: 'Portfolio',
@@ -31,7 +32,6 @@ const metadata = {
       icon: 'tabler:download',
     },
   ]}
-  image={{ src: '~/assets/images/MOCH4_wide.jpg', alt: 'Caden McCarthy' }}
 >
   <Fragment slot="title">
     Caden McCarthy
@@ -39,6 +39,16 @@ const metadata = {
 
   <Fragment slot="subtitle">
     Aerospace Engineering Student at UC Irvine
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0">
+      <img 
+        src={bgImage.src} 
+        alt="Background" 
+        class="w-full h-full object-cover opacity-30 dark:opacity-40"
+      />
+    </div>
   </Fragment>
 </Hero>
 
