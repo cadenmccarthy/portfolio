@@ -107,10 +107,125 @@ const metadata = {
     </div>
   </section>
 
-  <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
+<section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Injector Design</h2>
+    
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      Over my time on the UCI Rocket Project, I’ve served as the main Injector RE. One of the main goals of the injector redesign was to increase the achieved thrust of the engine, which during the testing of the previous rocket, PTR, only reached about 850 lbf, whereas the design thrust of the engine is 1300 lbf. PTR’s engine used a showerhead injector design, a very low performance injector type. After doing some trades on injector types, I decided on pursuing an impinging triplet injector due to its similarities with showerhead and its ease of manifolding. I started out with some basic conceptual designs in NX for an additively manufactured design, which our team was considering pursuing at the time.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/additive_injector_1.png" alt="Additive Injector Cross Section" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Cross section of intitial additive design. Still needed work on enforcing overhang angles</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/additive_injector_2.png" alt="Additive Injector Faceplate" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Additive faceplate orifice geometry</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      To verify the manifolding pressure drop, I ran some steady, incompressible CFD in STAR-CCM+ using the k-w turbulence model. The CFD seemed to match predictions fairly well regarding pressure drops across the manifolding and orifices.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/additive_lox_side.gif" alt="Additive Injector CFD LOX" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Additive injector LOX manifold velocity. Given this is a steady sim, the animation results are technically garbage, but I still think they look pretty :)</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/additive_lng_top.gif" alt="Additive Injector CFD LNG" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Additive injector LNG manifold velocity</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      Due to the fact that an additive design would have to be post-machined and our lack of funds, we decided to pursue a traditional machined design. I helped design this injector, which was subsequently used in VTF1. While VTF1 failed for an unrelated reason (the chamber liner material delaminated during the burn), for VTF2, I redesigned the injector to be LOX centered, whereas on the VTF1 injector it was LNG centered. The orifice geometry, though, was poorly thought out, and hot gas recirculation zones led to a burn through in the center of the faceplate into the LNG manifold, although the engine did not explode during the burn.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf2_faceplate_cad.png" alt="VTF2 Faceplate CAD" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">VTF2 injector faceplate CAD in NX</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf2_faceplate_real.jpg" alt="VTF2 Faceplate Real" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">VTF2 injector faceplate post-hot fire</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      For the third iteration, I redistributed the orifices on the faceplate in an attempt to remove these recirculation zones.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf3_injector_cross_section.png" alt="VTF3 Injector Cross Section" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">VTF3 faceplate cross section</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf3_injector_faceplate.png" alt="VTF3 Injector Faceplate" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">VTF3 injector faceplate with a more even orifice distribution</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      After the VTF3 failure, the team decided to revert to a modified version of the showerhead design in order to act as a control from which we could have validated the feed system. After an unrelated short burn duration during VTF4 (poor prop conditioning and large leaks), the engine exploded three seconds into the burn for VTF5. Very similar to the failure mode for VTF3, this pointed to a much deeper issue with our methodology.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf5_engine.jpg" alt="VTF5 Engine Post-Fire" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">VTF5 engine catapulted itself off the test stand</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/vtf5_outer_ring.jpg" alt="VTF5 Outer Ring" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">A large chunk of the injector outer ring was found ~400 feet away from the test stand</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      Although PTR’s engine successfully used aluminum for the injector faceplate, aluminum is poorly suited for use in a rocket engine due to its low melting point, low strength at high temperatures, and poor LOX compatibility. Moving forward, I’m currently doing deeper trades on different materials (stainless steel, inconel, and copper) to increase the chance of success. Furthermore, I have pushed for a more thorough characterization of the CdA of the injector, a test which I previously attempted but failed due to a low Cv regulator unable to supply sufficient pressure to the injector water supply. In addition to this, engine chamber pressure measurement will be added and independent mass flow rate measurement of the propellants will be added with venturis to better characterize injector and engine performance.
+    </p>
+
+    <figure class="flex flex-col items-center mb-8">
+      <img src="/portfolio/thermal_graph.png" alt="Thermal Graph" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Transient thermal graph for copper with typical material properties, using chamnber gas convection coefficient that yields max allowable material temperature</figcaption>
+    </figure>
+
+    <figure class="flex flex-col items-center mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-3 w-full">
+        <img src="/portfolio/water_flow_1.jpg" alt="Injector Water Flow Test 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+        <img src="/portfolio/water_flow_2.jpg" alt="Injector Water Flow Test 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      </div>
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+        Attempted injector water flow test
+      </figcaption>
+    </figure>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      Finally, in an effort to verify that the manifold pressure drops in the injector are negligible, I wrote some Python code to calculate the pressure drop in both the LOX and LNG manifolds and plot the mass flow distribution. It has proven to be quite uniform, and matched predictions. To verify this, I have performed more CFD on the design.
+    </p>
+
+    <figure class="flex flex-col items-center mb-8">
+      <img src="/portfolio/mass_flow_distribution.png" alt="Mass Flow Distribution" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">LOX manifold mass flow distribution. Mass flows are within ~+/-0.03% of the mean</figcaption>
+    </figure>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/new_lox_cfd_side.png" alt="LOX CFD Side" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">New LOX CFD simulation for VTF5 injector</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/new_lox_cfd_top.png" alt="LOX CFD Top" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Top view of LOX manifold static pressure distribution</figcaption>
+      </figure>
+    </div>
+
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      Over my time on the UCI Rocket Project, I’ve served as the main Injector RE.
+      Overall, I’ve made many mistakes in this process. If I were to do it all over again, I would have started with a control, a showerhead design, and implemented chamber pressure and mass flow rate measurement to calculate the c* efficiency of the injector from which to base a trade study on. Following this, I would have paid closer attention to material selection and not fallen into the trap of “it worked before, it should work again.” In general, I would have pushed harder for better system characterization, more data collection, and not pushing for test fires without the appropriate tests to back it up. I am enforcing these changes now, and hope that it will lead to a successful test fire in the near future.
     </p>
   </section>
 
