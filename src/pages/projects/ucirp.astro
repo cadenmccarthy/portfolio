@@ -12,15 +12,15 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-<section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
-    <img 
-      src="/portfolio/vtf_background.gif" 
-      alt="Rocket Hot Fire Test" 
+  <section class="relative h-[70vh] flex items-center justify-center overflow-hidden -mt-[80px] pt-[80px]">
+    <video 
+      src="/portfolio/vtf_background.mp4" 
+      autoplay loop muted playsinline 
       class="absolute inset-0 w-full h-full object-cover -z-10"
-    />
+    ></video>
     <div class="absolute inset-0 bg-black/60 -z-10"></div>
     
-    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide text-center font-heading drop-shadow-lg">
+    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide text-center font-heading drop-shadow-lg px-4">
       UCI Rocket Project
     </h1>
   </section>
@@ -44,29 +44,94 @@ const metadata = {
 
   <section class="max-w-4xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-bold mb-6 font-heading">Testing</h2>
-    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      [Drop in your details about test stands, data acquisition, cold flows, or hot fires here.]
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      To validate the design and manufacturing of the full fluid system, I served as Test Lead for our full system cold flow tests which are intended to provide invaluable data ahead of our Vertical Test Fire campaign and launch. Each successive cold flow comes with new challenges and problems to be solved, but through each test we learn new ways to improve our system and procedures which is vital for our future success.
     </p>
+
+    <figure class="flex flex-col items-center mb-8">
+      <img src="/portfolio/testing-1.jpg" alt="Testing Image 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+        [Caption for your testing image goes here]
+      </figcaption>
+    </figure>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      [Insert your second paragraph about testing details, test stand integration, or data analysis here.]
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/testing-gif-1.gif" alt="Testing GIF 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Caption for GIF 1</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/testing-gif-2.gif" alt="Testing GIF 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Caption for GIF 2</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/testing-gif-3.gif" alt="Testing GIF 3" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Caption for GIF 3</figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/testing-gif-4.gif" alt="Testing GIF 4" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">Caption for GIF 4</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Injector Design</h2>
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      [Details on pintle vs. impinging, pressure drops, manifolding, and machining tolerances.]
+      I also helped design our engine's injector, which will be a triplet impinging injector. On the path towards the final injector design, we went through many iterations with different manifolding, element placement, and different impingement methods, including a like-doublet design. We finally settled on an impinging triplet design due to its simplicity of manifolding and its promise of increased performance. We had two main designs, one of which was intended for additive manufacturing and the other for traditional machining. I created an injector calculator to constrain the injector design parameters, such as orifice size and number, for both designs, and worked on the CAD for the additive injector design. While we ended up selecting the machined design, I still gained valuable experience in injector design and design for manufacturing. In addition to creating the CAD design for the injector, I made CFD simulations in STAR-CCM+ to validate injector parameters and to determine the pressure drop across the manifolding, which is something that cannot be easily calculated by hand. This helps to inform our feed system design and select appropriate propellant inlet pressures to maximize engine performance.
     </p>
   </section>
 
   <section class="max-w-4xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-bold mb-6 font-heading">Nozzle Design</h2>
-    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      [Details on expansion ratios, contour generation, thermal analysis, and ablation/cooling strategies.]
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      One of my main tasks on UCIRP was to design the nozzle for our engine, which will improve over the design of the previous engine, PTE. PTE's nozzle was severely overexpanded for the target flight altitude, and performance was lost as a result. I've researched conical and parabolic nozzle geometries in order to run CFD simulations in STAR-CCM+ to compare the different nozzle geometries expanded for different altitudes. I also created a MATLAB calculator to create the diverging geometry of the nozzle contour to be imported into the CFD simulations. The previous nozzle was designed for a target apogee of around 30,000 feet, which is far greater than the achieved apogee of about 10,000 feet, causing efficiency losses. Our next rocket is set to reach an apogee of around 16,000 feet, breaking the current record of 13,205 feet. This requires an optimally expanded nozzle to maximize thrust and efficiency. My MATLAB nozzle calculator takes inputs of throat and nozzle radius and outputs a set of points that follow a parabolic nozzle contour which is imported into STAR-CCM+ for analysis or Siemens NX to create the CAD for the nozzle. The contour is designed to improve the efficiency and thrust of the engine by better controlling the flow through the diverging portion of the nozzle.
     </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <img src="/portfolio/nozzle-gif-1.gif" alt="Nozzle CFD GIF 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      <img src="/portfolio/nozzle-gif-2.gif" alt="Nozzle CFD GIF 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      [Insert your second paragraph about nozzle manufacturing, heat transfer considerations, or CFD validation here.]
+    </p>
+
+    <figure class="flex flex-col items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-3 w-full">
+        <img src="/portfolio/nozzle-img-1.jpg" alt="Nozzle Image 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+        <img src="/portfolio/nozzle-img-2.jpg" alt="Nozzle Image 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+      </div>
+      <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+        [Single caption describing both nozzle images above]
+      </figcaption>
+    </figure>
   </section>
 
   <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 mb-20 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Propellant Tank Design</h2>
-    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      [Details on operating pressures, material selection, bulkheads, and fluid system routing.]
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+      I've also helped design MOCH4's propellant tanks. Throughout the design phase, I researched and compared separate, common dome, and coaxial propellant tank designs before settling on separate tanks as the simplest option while allowing for vital feed system components to be placed in the inter-tank structure. After deciding on this design, I did calculations to determine the required thickness of the tanks while accounting for tank pressure, compressive stress, and shock force, ultimately determining that the critical load case for the tanks is pressure at launch. I then created the tanks in NX to be sent for manufacture.
     </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/tank-img-1.jpg" alt="Tank Design 1" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+          [Caption for tank design image 1]
+        </figcaption>
+      </figure>
+      <figure class="flex flex-col items-center">
+        <img src="/portfolio/tank-img-2.jpg" alt="Tank Design 2" class="w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700 mb-3" />
+        <figcaption class="text-sm text-gray-500 dark:text-gray-400 text-center italic px-2">
+          [Caption for tank design image 2]
+        </figcaption>
+      </figure>
+    </div>
   </section>
+
 </Layout>
