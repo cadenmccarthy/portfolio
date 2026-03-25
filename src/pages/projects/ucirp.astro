@@ -29,7 +29,7 @@ const metadata = {
     <div class="flex-1">
       <h2 class="text-3xl font-bold mb-4 font-heading">My Role</h2>
       <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-        I'm currently one of the Chief Engineers and Test Director for the project, where I have ownership over the propulsion system from a system level. I was previously the Lead Propulsion Engineer and Test Lead, where I owned engine design and manufacturing, particularly as it pertains to the nozzle and injector.
+        I’m currently one of the Chief Engineers for the project, as well as the project’s Test Director. I have ownership over the whole propulsion system and how it interfaces with the vehicle. As Test Director, I run and write procedures for system level tests, such as cold flows and hot fires. I was previously the Lead Propulsion Engineer for the project, and a Propulsion Engineer before that, where I owned engine manufacturing and design, nozzle design, and injector design.
       </p>
     </div>
 
@@ -55,7 +55,7 @@ const metadata = {
   <section class="max-w-4xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-bold mb-6 font-heading">Testing</h2>
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-      To validate the design and manufacturing of the full fluid system, I served as Test Lead for our full system cold flow tests which are intended to provide invaluable data ahead of our Vertical Test Fire campaign and launch. Each successive cold flow comes with new challenges and problems to be solved, but through each test we learn new ways to improve our system and procedures which is vital for our future success.
+      To validate system performance, I served as Test Director for many cold flows and three hot fires. In addition to running the procedures on the test day, I also updated previous procedures. By changing our procedures and implementing a bottle manifolding technique, I was able to reduce total procedure times by about 30%, opening up the possibility of performing two test fires in one day and saving the project about $3,000 in the process.
     </p>
 
     <figure class="flex flex-col items-center mb-8">
@@ -66,7 +66,7 @@ const metadata = {
     </figure>
 
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-      Insert text here
+      Below are the five test fires we’ve performed for MOCH4 so far. All test fires have been failures for one reason or another. We’re currently making major updates to our engine design and cold flow procedures in order to maximize the chances of success on our next hot fire test campaign.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -100,14 +100,14 @@ const metadata = {
   <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Injector Design</h2>
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-      I also helped design our engine's injector, which will be a triplet impinging injector. On the path towards the final injector design, we went through many iterations with different manifolding, element placement, and different impingement methods, including a like-doublet design. We finally settled on an impinging triplet design due to its simplicity of manifolding and its promise of increased performance. We had two main designs, one of which was intended for additive manufacturing and the other for traditional machining. I created an injector calculator to constrain the injector design parameters, such as orifice size and number, for both designs, and worked on the CAD for the additive injector design. While we ended up selecting the machined design, I still gained valuable experience in injector design and design for manufacturing. In addition to creating the CAD design for the injector, I made CFD simulations in STAR-CCM+ to validate injector parameters and to determine the pressure drop across the manifolding, which is something that cannot be easily calculated by hand. This helps to inform our feed system design and select appropriate propellant inlet pressures to maximize engine performance.
+      Over my time on the UCI Rocket Project, I’ve served as the main Injector RE.
     </p>
   </section>
 
   <section class="max-w-4xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-bold mb-6 font-heading">Nozzle Design</h2>
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-      One of my main tasks on UCIRP was to design the nozzle for our engine, which will improve over the design of the previous engine, PTE. PTE's nozzle was severely overexpanded for the target flight altitude, and performance was lost as a result. I've researched conical and parabolic nozzle geometries in order to run CFD simulations in STAR-CCM+ to compare the different nozzle geometries expanded for different altitudes. I also created a MATLAB calculator to create the diverging geometry of the nozzle contour to be imported into the CFD simulations. The previous nozzle was designed for a target apogee of around 30,000 feet, which is far greater than the achieved apogee of about 10,000 feet, causing efficiency losses. Our next rocket is set to reach an apogee of around 16,000 feet, breaking the current record of 13,205 feet. This requires an optimally expanded nozzle to maximize thrust and efficiency.
+      I also designed the nozzle for our current engine. PTR’s engine was overexpanded (perfectly expanded at ~30,000 ft!), so I redesigned the nozzle to be perfectly expanded at ground level to maximize speed off the launch rail. After re-running all the CEA for the engine to verify accurate chamber parameters, I created a short MATLAB script to create the diverging contour of the engine, which is parabolic. Following this I helped to create CFD simulations in STAR-CCM+ to validate calculations and optimal expansion at the target conditions. Ultimately, this campaign was a failure due to issues with getting the thrust levels to match those of the design parameters, although it served as my first experience with CFD and I learned a lot from it.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -116,7 +116,7 @@ const metadata = {
     </div>
 
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-      My MATLAB nozzle calculator takes inputs of throat and nozzle radius and outputs a set of points that follow a parabolic nozzle contour which is imported into STAR-CCM+ for analysis or Siemens NX to create the CAD for the nozzle. The contour is designed to improve the efficiency and thrust of the engine by better controlling the flow through the diverging portion of the nozzle.
+      My MATLAB nozzle calculator takes inputs of throat and nozzle radius and outputs a set of points that follow a parabolic contour, which can then be imported into CAD and STAR-CCM+.
     </p>
 
     <figure class="flex flex-col items-center">
@@ -133,7 +133,7 @@ const metadata = {
   <section class="max-w-4xl mx-auto px-6 py-10 bg-gray-50 dark:bg-slate-900 rounded-2xl my-6 mb-20 border border-gray-100 dark:border-gray-800">
     <h2 class="text-3xl font-bold mb-6 font-heading">Propellant Tank Design</h2>
     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-      I've also helped design MOCH4's propellant tanks. Throughout the design phase, I researched and compared separate, common dome, and coaxial propellant tank designs before settling on separate tanks as the simplest option while allowing for vital feed system components to be placed in the inter-tank structure. After deciding on this design, I did calculations to determine the required thickness of the tanks while accounting for tank pressure, compressive stress, and shock force, ultimately determining that the critical load case for the tanks is pressure at launch. I then created the tanks in NX to be sent for manufacture.
+      I did the initial design of the pressure vessel for MOCH4’s propellant tanks. During the design phase, I did trades on separate, common dome, and coaxial propellant tanks before settling on separate tanks as the simplest option. Common dome or coaxial tanks would have required precise control over pressures to ensure a negative dP event never occurs, as well as internal plumbing that we would not have access to after the domes are welded on. After choosing separate tanks, I performed calculations to size the wall thickness using the thin-walled pressure vessel equations, and verified that they can withstand the compressive stress from launch and the shock force during recovery. After this, the Launch Vehicle team added skirts to the domes to be interfaced with the skins and stringers, and the tanks were manufactured.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
